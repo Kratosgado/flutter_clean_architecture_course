@@ -13,12 +13,12 @@ class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
 
   @override
-  _SplashViewState createState() => _SplashViewState();
+  SplashViewState createState() => SplashViewState();
 }
 
-class _SplashViewState extends State<SplashView> {
+class SplashViewState extends State<SplashView> {
   Timer? _timer;
-  AppPreferences _appPreferences = instance<AppPreferences>();
+  final AppPreferences _appPreferences = instance<AppPreferences>();
 
   _startDelay() {
     _timer = Timer(const Duration(seconds: 2), _goNext);

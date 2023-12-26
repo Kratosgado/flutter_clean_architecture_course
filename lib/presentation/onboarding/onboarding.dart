@@ -81,7 +81,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                   },
                   child: Text(
                     AppStrings.skip,
-                    style: Theme.of(context).textTheme.subtitle2,
+                    style: Theme.of(context).textTheme.titleSmall,
                     textAlign: TextAlign.end,
                   ).tr(),
                 ),
@@ -151,8 +151,8 @@ class _OnBoardingViewState extends State<OnBoardingView> {
     );
   }
 
-  Widget _getProperCircle(int index, int _currentIndex) {
-    if (index == _currentIndex) {
+  Widget _getProperCircle(int index, int currentIndex) {
+    if (index == currentIndex) {
       return SvgPicture.asset(ImageAssets.hollowCircleIc);
     } else {
       return SvgPicture.asset(ImageAssets.solidCircleIc);
